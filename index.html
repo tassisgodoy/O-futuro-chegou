@@ -37,10 +37,21 @@
         padding: 20px;
         background: #f8f9fa; /* Cor de fundo padrão */
         border-radius: 8px;
+        position: relative;
     }
 
-    .text:hover {
-        background: #e9ecef; /* Cor de fundo ao passar o mouse */
+    .hover-text {
+        display: none; /* Inicialmente oculto */
+        position: absolute;
+        bottom: 10px; /* Ajuste a posição conforme necessário */
+        left: 50%;
+        transform: translateX(-50%);
+        color: #000; /* Cor do texto "Saiba Mais" */
+        font-weight: bold;
+    }
+
+    .block-18:hover .hover-text {
+        display: block; /* Exibe ao passar o mouse */
     }
 </style>
 
@@ -787,6 +798,7 @@
                     <div class="text">
                         <strong class="number" data-number="150">0</strong>
                         <span>Protótipos de Veículos Voadores</span>
+                        <span class="hover-text">Saiba Mais</span>
                     </div>
                 </a>
             </div>
@@ -796,6 +808,7 @@
                     <div class="text">
                         <strong class="number" data-number="10000">0</strong>
                         <span>Voos de Teste Realizados</span>
+                        <span class="hover-text">Saiba Mais</span>
                     </div>
                 </a>
             </div>
@@ -805,6 +818,7 @@
                     <div class="text">
                         <strong class="number" data-number="95">0</strong>
                         <span>Satisfação dos Usuários (%)</span>
+                        <span class="hover-text">Saiba Mais</span>
                     </div>
                 </a>
             </div>
@@ -814,12 +828,14 @@
                     <div class="text">
                         <strong class="number" data-number="500">0</strong>
                         <span>Milhões Investidos em P&D</span>
+                        <span class="hover-text">Saiba Mais</span>
                     </div>
                 </a>
             </div>
         </div>
     </div>
 </section>
+
   
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
