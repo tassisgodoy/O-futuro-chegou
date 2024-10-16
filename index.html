@@ -35,7 +35,7 @@
     .text {
         text-align: center;
         padding: 20px;
-        background: #f8f9fa; /* Cor de fundo padrão */
+        background: #000; /* Cor de fundo padrão */
         border-radius: 8px;
         position: relative;
         transition: background-color 0.3s;
@@ -52,13 +52,19 @@
     }
 
     .block-18:hover .text {
-        background-color: #000; /* Cor de fundo ao passar o mouse */
+        background-color: #f8f9fa; /* Cor de fundo ao passar o mouse */
     }
 
     .block-18:hover .hover-text {
-        display: block; /* Exibe ao passar o mouse */
+        display: block; /* Exibe "Saiba Mais" ao passar o mouse */
+    }
+
+    .block-18:hover strong,
+    .block-18:hover span:not(.hover-text) {
+        display: none; /* Esconde o texto original ao passar o mouse */
     }
 </style>
+
 
 
 	<link rel="icon" type="image/jpg" href= "images/LOGO FUTURO.png"><!--icone de página-->
@@ -841,6 +847,7 @@
         </div>
     </div>
 </section>
+
 
 
   
