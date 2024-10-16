@@ -21,12 +21,11 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-	  <style>
+	 <style>
     .block-18 {
         text-decoration: none;
         transition: transform 0.3s, box-shadow 0.3s;
     }
-
     .block-18:hover {
         transform: scale(1.05);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -42,21 +41,22 @@
     }
 
     .hover-text {
-        display: none; /* Inicialmente oculto */
+        opacity: 0; /* Inicialmente invisível */
         position: absolute;
         bottom: 10px; /* Ajuste a posição conforme necessário */
         left: 50%;
         transform: translateX(-50%);
         color: #fff; /* Cor do texto "Saiba Mais" */
         font-weight: bold;
+        transition: opacity 0.3s; /* Transição suave para aparecer */
     }
 
     .block-18:hover .text {
-        background-color: #f8f9fa; /* Cor de fundo ao passar o mouse */
+        background-color: #1C1C1C; /* Cor de fundo ao passar o mouse */
     }
 
     .block-18:hover .hover-text {
-        display: block; /* Exibe "Saiba Mais" ao passar o mouse */
+        opacity: 1; /* Torna visível ao passar o mouse */
     }
 
     .block-18:hover strong,
@@ -64,6 +64,7 @@
         display: none; /* Esconde o texto original ao passar o mouse */
     }
 </style>
+
 
 
 
