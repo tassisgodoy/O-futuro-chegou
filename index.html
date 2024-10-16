@@ -35,8 +35,10 @@
     .text {
         text-align: center;
         padding: 20px;
+        background: #f8f9fa; /* Cor de fundo padrão */
         border-radius: 8px;
         position: relative;
+        transition: background-color 0.3s;
     }
 
     .hover-text {
@@ -45,14 +47,19 @@
         bottom: 10px; /* Ajuste a posição conforme necessário */
         left: 50%;
         transform: translateX(-50%);
-        color: #000; /* Cor do texto "Saiba Mais" */
+        color: #fff; /* Cor do texto "Saiba Mais" */
         font-weight: bold;
+    }
+
+    .block-18:hover .text {
+        background-color: #000; /* Cor de fundo ao passar o mouse */
     }
 
     .block-18:hover .hover-text {
         display: block; /* Exibe ao passar o mouse */
     }
 </style>
+
 
 	<link rel="icon" type="image/jpg" href= "images/LOGO FUTURO.png"><!--icone de página-->
   </head>
@@ -834,6 +841,7 @@
         </div>
     </div>
 </section>
+
 
   
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
