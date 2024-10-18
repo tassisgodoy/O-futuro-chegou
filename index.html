@@ -68,43 +68,16 @@
 	  <style>
          .rocket-anchor {
             display: inline-block;
-            transition: transform 0.3s ease, filter 0.3s ease;
-            position: relative;
+            transition: transform 0.5s ease; /* Transição mais lenta */
             margin-right: 20px; /* Espaço à direita */
         }
 
         .rocket-anchor:hover {
-            animation: bounce 0.6s infinite, rotate 0.6s linear infinite;
-            filter: brightness(1.2);
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-20px);
-            }
-            60% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            transform: translateY(-15px); /* Sobe mais devagar */
         }
 
         img {
-            transition: transform 0.3s ease;
-        }
-
-        .rocket-anchor:hover img {
-            transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+            width: 7%;
         }
     </style>
 
