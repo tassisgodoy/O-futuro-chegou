@@ -65,6 +65,28 @@
     }
 </style>
 
+	  <style>
+        .rocket-anchor {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .rocket-anchor:hover {
+            animation: bounce 0.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+    </style>
 
 
 
@@ -1029,7 +1051,11 @@
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   NTMP Futuro - <script>document.write(new Date().getFullYear());</script> &copy; Todos os direitos reservados<br>Trabalho acadêmico sem fins lucrativos.
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-		  <div align="right"><a href="#"><img src="images/foguete.png" width="7%"></a> </div><!--âcnora com imagem-->
+		  <div align="right">
+    <a href="#" class="rocket-anchor">
+        <img src="images/foguete.png" width="7%" alt="Foguete">
+    </a>
+</div>
           </div>
         </div>
       </div>
