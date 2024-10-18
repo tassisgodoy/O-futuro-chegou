@@ -66,13 +66,15 @@
 </style>
 
 	  <style>
-        .rocket-anchor {
+         .rocket-anchor {
             display: inline-block;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            position: relative;
         }
 
         .rocket-anchor:hover {
-            animation: bounce 0.5s infinite;
+            animation: bounce 0.6s infinite, rotate 0.6s linear infinite;
+            filter: brightness(1.2);
         }
 
         @keyframes bounce {
@@ -80,11 +82,28 @@
                 transform: translateY(0);
             }
             40% {
-                transform: translateY(-15px);
+                transform: translateY(-20px);
             }
             60% {
-                transform: translateY(-7px);
+                transform: translateY(-10px);
             }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        img {
+            transition: transform 0.3s ease;
+        }
+
+        .rocket-anchor:hover img {
+            transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
         }
     </style>
 
@@ -1051,7 +1070,7 @@
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   NTMP Futuro - <script>document.write(new Date().getFullYear());</script> &copy; Todos os direitos reservados<br>Trabalho acadêmico sem fins lucrativos.
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-		  <div align="right">
+<div>
     <a href="#" class="rocket-anchor">
         <img src="images/foguete.png" width="7%" alt="Foguete">
     </a>
