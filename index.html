@@ -65,33 +65,6 @@
     }
 </style>
 
-	  <style>
-        body {
-            background-color: #121212; /* Fundo escuro */
-            display: flex;
-            justify-content: flex-end; /* Alinha à direita */
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden; /* Esconde a barra de rolagem */
-        }
-
-        .rocket-anchor {
-            display: inline-block;
-            transition: transform 0.5s ease; /* Transição ao passar o mouse */
-            margin-right: 20px; /* Espaço à direita */
-        }
-
-        .rocket-anchor:hover {
-            transform: translateY(-15px); /* Sobe ao passar o mouse */
-        }
-
-        img {
-            width: 7%;
-        }
-    </style>
-
-
 	<link rel="icon" type="image/jpg" href= "images/LOGO FUTURO.png"><!--icone de página-->
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -1054,21 +1027,10 @@
   NTMP Futuro - <script>document.write(new Date().getFullYear());</script> &copy; Todos os direitos reservados<br>Trabalho acadêmico sem fins lucrativos.
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 <div align="right">
-    <a href="#" class="rocket-anchor">
+    <a href="#">
         <img src="images/foguete.png" width="7%" alt="Foguete">
     </a>
 </div>
-		  <script>
-    const rocket = document.getElementById('rocket');
-
-    rocket.addEventListener('click', function(event) {
-        event.preventDefault(); // Impede o comportamento padrão do link
-        window.scrollTo({
-            top: 0, // Desce até o topo
-            behavior: 'smooth' // Animação suave
-        });
-    });
-</script>
           </div>
         </div>
       </div>
