@@ -66,7 +66,17 @@
 </style>
 
 	  <style>
-         .rocket-anchor {
+        body {
+            background-color: #121212; /* Fundo escuro */
+            display: flex;
+            justify-content: flex-end; /* Alinha à direita */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Esconde a barra de rolagem */
+        }
+
+        .rocket-anchor {
             display: inline-block;
             transition: transform 0.5s ease; /* Transição ao passar o mouse */
             margin-right: 20px; /* Espaço à direita */
@@ -76,16 +86,10 @@
             transform: translateY(-15px); /* Sobe ao passar o mouse */
         }
 
-        .return {
-            transition: transform 1s ease; /* Transição mais lenta ao voltar */
-            transform: translateY(0); /* Posição original */
-        }
-
         img {
             width: 7%;
         }
     </style>
-
 
 
 	<link rel="icon" type="image/jpg" href= "images/LOGO FUTURO.png"><!--icone de página-->
@@ -1057,11 +1061,12 @@
 		  <script>
     const rocket = document.getElementById('rocket');
 
-    rocket.addEventListener('click', function() {
-        rocket.classList.add('return');
-        setTimeout(() => {
-            rocket.classList.remove('return');
-        }, 1000); // Remove a classe após 1 segundo
+    rocket.addEventListener('click', function(event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+        window.scrollTo({
+            top: 0, // Desce até o topo
+            behavior: 'smooth' // Animação suave
+        });
     });
 </script>
           </div>
