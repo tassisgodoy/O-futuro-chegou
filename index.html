@@ -68,12 +68,17 @@
 	  <style>
          .rocket-anchor {
             display: inline-block;
-            transition: transform 0.5s ease; /* Transição mais lenta */
+            transition: transform 0.5s ease; /* Transição ao passar o mouse */
             margin-right: 20px; /* Espaço à direita */
         }
 
         .rocket-anchor:hover {
-            transform: translateY(-15px); /* Sobe mais devagar */
+            transform: translateY(-15px); /* Sobe ao passar o mouse */
+        }
+
+        .return {
+            transition: transform 1s ease; /* Transição mais lenta ao voltar */
+            transform: translateY(0); /* Posição original */
         }
 
         img {
@@ -1049,6 +1054,16 @@
         <img src="images/foguete.png" width="7%" alt="Foguete">
     </a>
 </div>
+		  <script>
+    const rocket = document.getElementById('rocket');
+
+    rocket.addEventListener('click', function() {
+        rocket.classList.add('return');
+        setTimeout(() => {
+            rocket.classList.remove('return');
+        }, 1000); // Remove a classe após 1 segundo
+    });
+</script>
           </div>
         </div>
       </div>
